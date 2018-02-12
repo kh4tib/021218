@@ -1,0 +1,90 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Styles */
+
+.main-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;    
+    position: relative;
+}
+
+
+.oval-one {
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid violet;
+    animation: animated-oval-one;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 300ms ease-in-out;
+    animation-fill-mode: forwards
+}
+
+@keyframes animated-oval-one{
+
+    0% {
+        transform:rotate(0deg);
+        border-radius:0;
+        border: 5px solid #2ecc71;
+    }
+
+    50% {
+        border-radius:50%;
+        border: 5px solid #8e44ad;
+        
+    }
+
+    100% {
+        transform:rotate(180deg);
+        border-radius:0%;
+        border: 5px solid #2ecc71;
+    }
+}
+
+.oval-two {
+    width: 3rem;
+    height: 3rem;
+    background-color: #8e44ad;
+    animation: animated-oval-two;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 300ms ease-in-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+    transform: translate( 10px , 10px );
+}
+
+@keyframes animated-oval-two{
+    
+        0% {
+            transform:rotate(360deg);
+            border-radius:0;
+            background-color: #2ecc71;
+        }
+    
+        50% {
+            border-radius:50%;
+            background-color: #8e44ad;
+        }
+    
+        100% {
+            transform:rotate(0deg);
+            border-radius:0%;
+            background-color: #2ecc71;
+        }
+    }
